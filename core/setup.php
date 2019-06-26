@@ -93,10 +93,9 @@ Class THEME_REGISTER {
 
     public static function styles() {
         wp_enqueue_style( 'theme_style', get_stylesheet_uri() );
-    }
-
-    public static function scripts() {
-        wp_enqueue_script( 'theme_index_script', get_template_directory_uri() . '/assets/js/index.js' );
+        if ( class_exists('NICE_FRAMEWORK') ) {
+            NICE_FRAMEWORK::wp_enqueue_all();
+        }
     }
 
 }
@@ -105,4 +104,3 @@ add_action( 'after_setup_theme',  array('THEME_REGISTER', 'setup'            ) )
 add_action( 'after_setup_theme',  array('THEME_REGISTER', 'setup_defaults'   ) );
 add_action( 'widgets_init',       array('THEME_REGISTER', 'widgets_init'     ) );
 add_action( 'wp_enqueue_scripts', array('THEME_REGISTER', 'styles'           ) );
-add_action( 'wp_enqueue_scripts', array('THEME_REGISTER', 'scripts'          ) );

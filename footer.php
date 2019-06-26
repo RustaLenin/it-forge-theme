@@ -1,8 +1,4 @@
-<?php
-
-include ('template-parts/footer-content.php');
-
-?>
+<?php ?>
 
 </div>
 
@@ -18,6 +14,8 @@ include ('template-parts/footer-content.php');
     window.currentLocale                  = `<?php echo Locale; ?>`;
     /* ]]> */
 </script>
+
+<script type="module" src="<?php echo get_template_directory_uri() . '/assets/js/index.js'; ?>"></script>
 
 </body>
 </html>

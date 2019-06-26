@@ -19,19 +19,14 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="canonical" href="<?php echo get_site_url(); ?>"/>
     <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap&subset=cyrillic-ext" rel="stylesheet">
     <?php
-
-    if ( class_exists('THEME_SETTINGS') ) {
-	    $settings = get_option( THEME_SETTINGS::$settings_name );
-    }
     wp_head(); ?>
 </head>
 
 <body>
 
-<?php
-  	include_once ( 'template-parts/svg/sprite.php');
-?>
+<?php include_once('assets/css/vars.php'); ?>
 
 <div class="site_wrap">
-    <?php include( 'template-parts/header-content.php');
+    <?php include( 'template-parts/header/wrap.php');

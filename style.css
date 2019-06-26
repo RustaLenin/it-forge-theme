@@ -13,12 +13,19 @@ Text Domain: theme
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+@import url('assets/css/header.css');
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     padding: 0;
     display: block;
     height: 100%;
+    background-color: var( --site_background_color );
+    font-family: 'Roboto', sans-serif;
 }
 
 /** Default Styles For Wp Editor Content **/
