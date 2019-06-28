@@ -1,12 +1,16 @@
 .site_header {
     display: flex;
     justify-content: center;
+    margin-top: 40px;
+    position: sticky;
+    top: 0;
 }
 
 .site_header .row_wrap {
     display: flex;
-    width: 75vw;
-    height: 50px;
+    align-items: center;
+    width: 1100px;
+    height: 60px;
     background-color: var(--site_header_background_color);
     padding: 0 24px;
 }
@@ -21,6 +25,7 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
+    height: 100%;
 }
 
 .site_header .header__menu_element {
@@ -31,7 +36,7 @@
     height: 100%;
     text-decoration: none;
     transition: 0.4s;
-    padding: 0 8px;
+    padding: 3px 8px 0 8px;
     margin-right: 16px;
 }
 
@@ -47,7 +52,7 @@
 .site_header .header__menu_element.current:hover nice-svg svg { fill: var( --site_header_menu_current_icon_color_hover ); }
 
 .site_header .header__menu_element .title {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     color: var( --site_header_menu_text_color );
     transition: 0.4s;

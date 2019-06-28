@@ -26,7 +26,6 @@
 
 <body>
 
-<?php include_once('assets/css/vars.php'); ?>
-
-<div class="site_wrap">
-    <?php include( 'template-parts/header/wrap.php');
+<?php
+include_once('assets/css/vars.php');
+include_once( 'template-parts/header/wrap.php');

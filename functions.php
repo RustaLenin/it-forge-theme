@@ -18,10 +18,13 @@ define( 'THEME_MOD', dirname( __FILE__ ) . '/modules/'                );
 define( 'THEME_ASS', dirname( __FILE__ ) . '/assets/'	                );
 define( 'THEME_CSS', dirname( __FILE__ ) . '/assets/css/'             );
 define( 'THEME_JS',  dirname( __FILE__ ) . '/assets/js/'              );
+define( 'THEME_LAN', dirname( __FILE__ ) . '/languages/'              );
 
 
 require_once ( THEME_DIR . '/languages/language.php');
 require_once( THEME_COR . 'setup.php' );
+
+require_once ( THEME_MOD . '/user/user.php' );
 
 /**
  * Include files if module is supported

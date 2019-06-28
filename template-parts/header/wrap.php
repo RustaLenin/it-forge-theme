@@ -5,6 +5,7 @@
 
         <?php include 'logo.php'; ?>
         <?php include 'menu.php'; ?>
+        <?php include 'lang.php'; ?>
 
     </div>
 </header>

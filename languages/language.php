@@ -6,16 +6,14 @@ $supported_locales = [
         'text'       => 'EN',
         'default'    => true,
         'permission' => 'all',
-        'icon'       => 'flag_en_circle',
-        'color'      => false
+        'icon'       => 'flag_en_circle'
     ],
     'ru' => [
         'value'      => 'ru',
         'text'       => 'RU',
         'default'    => false,
         'permission' => 'all',
-        'icon'       => 'flag_ru_circle',
-        'color'      => false
+        'icon'       => 'flag_ru_circle'
     ]
 ];
 
@@ -43,6 +41,14 @@ if ( is_user_logged_in() ) {
 }
 
 define( 'Locale', $locale );
+
+define ( 'THEME_LANG', json_decode( file_get_contents(THEME_LAN . Locale . '.json'), 'ARRAY_A' ) );
+
+if ( !function_exists('t_') ) {
+    function t_( $key, $lang = THEME_LANG ) {
+        return $lang[$key] ? $lang[$key] : $key;
+    }
+}
 
 if ( class_exists( 'NiceTranslate' ) ) {
     NiceTranslate::defineLanguage( Locale );

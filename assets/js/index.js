@@ -6,5 +6,5 @@ Nice.insert.notifyArea();
 Nice.switchLocale(currentLocale);
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('hello world');
+
 });
