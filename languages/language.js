@@ -19,6 +19,7 @@ function change_locale() {
             };
             Nice.ajaxPost( request_data, false ).then( function ( answer ) {
                 if ( answer['result'] === 'success' ) {
+                    Cookies.set('locale', locale);
                     location.reload();
                 }
             });

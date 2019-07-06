@@ -5,7 +5,10 @@
  * @package Ignot
  */
 
-get_header(); ?>
+get_header();
+
+include('template-parts/index/first_screen/index.php'); ?>
+
 
 <!--    <div class="site_content">-->
 <!--		--><?php

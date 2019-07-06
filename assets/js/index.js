@@ -7,4 +7,6 @@ Nice.switchLocale(currentLocale);
 
 document.addEventListener('DOMContentLoaded', function() {
 
+
+
 });
